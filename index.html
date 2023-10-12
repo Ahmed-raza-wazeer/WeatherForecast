@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+</head>
+<body>
+   <div class="wrapper" >
+      <h1>Weather App</h1> 
+      <div class="tab-container">
+        <p class="tab" data-userWeather>Your Weather</p>
+        <p class="tab" data-searchWeather> Search Weather</p>
+      </div>
+
+      <div class="weather-container">
+        <!--grant location container-->
+        <div class=" sub-content grant-location-container"> 
+          <img src="./Asset/map.png" alt="location" width="80" height="80" loading="lazy">
+          <p>Grant location</p>
+          <p>Allow Access  to get weather information</p>
+          <button  class="btn" data-grantAccess>Grant Access </button>
+          
+        </div>
+        <div class="error">
+          
+        </div>
+
+     <form class="form-container"  data-searchForm >
+      <input  placeholder="Search for City..."   data-searchInput>
+      <button class="btn" type="submit"> <img  src="./Asset/search.png" width="25"  height="13"> </button>
+     </form>
+     
+
+
+     <!--loading screen container-->
+     <div class=" sun-container loading-container">
+      <img src="./Asset/Spinner.gif" alt="" width="90" height="90">
+      <p>loading</p>
+     </div>
+      </div>
+
+
+
+      <!--error Image-->
+
+      <img class="errorImg" src="./Asset/not-found.png">
+      
+      <!--show weather info -->
+      <div class="user-info-container">
+
+        <!--city name and flag-->
+        <div class="name">
+          <p data-cityName> </p>
+          <img  data-countryIcon src="" alt="">
+
+
+        </div>
+       <!--weather description-->
+        <p data-weatherDesc></p>
+
+        <!-- Weather Icon-->
+        <img data-weatherIcon>
+            
+        <!-- temperature  -->
+        <p data-temp>   </p>  
+
+        <!--card-->
+        <div class="parameter-container">
+          <!-- card 1-->
+          <div class="parameter">
+          <img src="./Asset/wind.png" alt="">
+          <p >windspeed</p>
+          <p data-windspeed></p>
+        </div>
+
+        <!--card 2-->
+        <div class="parameter">
+          <img src="./Asset/humidity.png" alt="">
+          <p>humidity</p>
+          <p data-humidity></p>
+
+        </div>
+        <!--card 3-->
+
+        <div class="parameter">
+          <img src="./Asset/cloud.png" alt="">
+          <p>Clouds</p>
+          <p data-cloudiness></p>
+        </div>
+
+
+
+
+
+        </div>
+
+
+
+      </div>
+
+   </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
